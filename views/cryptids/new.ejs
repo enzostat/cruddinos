@@ -1,11 +1,21 @@
 <h1>Let's Create a Cryptid!</h1>
 
 <form method="POST" action="/cryptids">
-  <label for="cryptidType">Location</label>
-  <input type="text" name="img_url">
+  
+	<label for="cryptidName">Name</label>
+	<input id="cryptidName" type="text" name="name">
 
-  <label for="cryptidName">Name</label>
-  <input id="cryptidName" type="text" name="name">
+	<label for="cryptidType">Url here</label>
+	<input  type="text" name="img_url">
+
+  
 
   <input id="cryptidType" type="submit">
 </form>
+
+<!-- <form method="POST" action="/cryptids">
+	<input type="text" name="name">Name Here
+	<input type="text" name="img_url">URL Here
+	<input type="submit">Submit
+
+</form> -->

@@ -1,5 +1,6 @@
 const express = require('express');
 const layout = require('express-ejs-layouts');
+const methodOverride = require('method-override');
 
 
 //instantiate the express app
@@ -9,6 +10,11 @@ const app = express();
 app.set('view engine', 'ejs');
 //Body parser middleware that puts the form data into req.body
 app.use(express.urlencoded({extended: false}));
+//method override middleware intercepts incoming POST requests
+//and if they have _method=PUT  or DELETE in the query string
+//It'll handle it as the respective HTTP verb
+app.use(methodOverride('_method'));
+
 
 
 //controller route
